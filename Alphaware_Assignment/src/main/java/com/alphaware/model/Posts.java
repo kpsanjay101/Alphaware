@@ -44,5 +44,7 @@ public class Posts {
     private Category category;
     
     private LocalDateTime createdAt = LocalDateTime.now();
+    
+    private int likes = 0;
 
 }

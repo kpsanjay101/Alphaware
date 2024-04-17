@@ -172,4 +172,10 @@ public class PostsServiceImpl implements PostsService{
 		
 	}
 
+//	@Override
+//	public int likePostsByPostIdUserId(int postId, int userId) {
+//		// TODO Auto-generated method stub
+//		return 0;
+//	}
+
 }

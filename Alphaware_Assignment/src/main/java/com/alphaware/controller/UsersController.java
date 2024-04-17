@@ -1,11 +1,14 @@
 package com.alphaware.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -44,7 +47,19 @@ public class UsersController {
 		 if(opt==null) throw new RuntimeException("No user found") ;
 		 Users user = opt;
 		 return new ResponseEntity<>(user.getUser_name()+" Logged In Successfully", HttpStatus.ACCEPTED);
-	}       
+	}
+	
+	@GetMapping("/AllUsers")
+	public ResponseEntity<List<Users>> getAllUsers(){
+    	
+		 return new ResponseEntity<>(userService.getAllUsers() , HttpStatus.ACCEPTED);
+	} 
+	
+	@GetMapping("/getUsers/{email}")
+	public ResponseEntity<Users> getUsersByEmail(@PathVariable String email){
+    	
+		 return new ResponseEntity<>(userService.getsersByEmail(email) , HttpStatus.ACCEPTED);
+	} 
 	
 
 }

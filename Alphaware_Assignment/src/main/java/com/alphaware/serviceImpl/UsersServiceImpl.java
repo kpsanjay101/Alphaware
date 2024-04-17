@@ -1,5 +1,6 @@
 package com.alphaware.serviceImpl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,34 @@ public class UsersServiceImpl implements UsersService{
 			throw new UsersException("User already register with this id "+users.getId());
 		}
 
+	}
+
+
+	@Override
+	public List<Users> getAllUsers() {
+		List<Users> userList = userRepo.findAll();
+		
+		if(!userList.isEmpty()) {
+			return userList;
+		}else {
+			throw new UsersException("No Users exist at this moment");
+		}
+
+	}
+
+
+	@Override
+	public Users getsersByEmail(String email) {
+		
+		Users user = userRepo.findByEmail(email);
+		
+		if(user != null) {
+			return user;
+		}
+		else {
+			throw new UsersException("User doesn't exist with this email "+email);
+		}
+		
 	}
 
 }

@@ -24,5 +24,7 @@ public interface PostsService {
 	
 	public List<Posts> getAllPostByCategoryName(String name);
 	
+//	public int likePostsByPostIdUserId(int postId, int userId);
+	
 	
 }

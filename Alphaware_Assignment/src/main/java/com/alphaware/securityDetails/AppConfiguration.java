@@ -40,20 +40,38 @@ public class AppConfiguration {
 					return configuration;
 				}
 			});
-		}) .authorizeHttpRequests(auth -> auth.requestMatchers(HttpMethod.POST , "/api/users/register").permitAll()
-				.requestMatchers("/swagger-ui*/**","/v3/api-docs/**").permitAll()				
+		}) .authorizeHttpRequests(auth -> auth.requestMatchers(
+				
+				HttpMethod.POST , "/api/users/register").permitAll()
+				
+				.requestMatchers("/swagger-ui*/**","/v3/api-docs/**").permitAll()
+				
 				.requestMatchers("/api/users/login").hasAnyRole("ADMIN" , "USER")
+				
 				.requestMatchers("/api/posts/getAll").hasAnyRole("ADMIN" , "USER")
+				
 				.requestMatchers("/api/posts/today").hasAnyRole("ADMIN" , "USER")
+				
+				.requestMatchers("/api/users/getUsers/{email}").hasAnyRole("ADMIN" , "USER")
+				
 				.requestMatchers("/api/posts/getAllByCategoryName/{name}").hasAnyRole("ADMIN" , "USER")
+				
 				.requestMatchers("/api/comments/create_comment/{userId}/{postId}").hasAnyRole("ADMIN" , "USER")
+				
 				.requestMatchers("/api/comments/getComments/{postId}").hasAnyRole("ADMIN" , "USER")
+				
 				.requestMatchers("/api/comments/update_comment/{commentId}").hasAnyRole("ADMIN" , "USER")
+				
 				.anyRequest().hasRole("ADMIN"))
+		
 				.csrf(csrf -> csrf.disable())
+				
 				.addFilterAfter(new JwtTokenGenerator(), BasicAuthenticationFilter.class)
+				
 				.addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class)
+				
 	         	.formLogin(Customizer.withDefaults())
+	         	
 				.httpBasic(Customizer.withDefaults());
 		
 		return http.build() ;
