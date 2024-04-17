@@ -38,7 +38,7 @@ public class UsersController {
 		
 	}
 	
-	@GetMapping("/logini")
+	@GetMapping("/login")
 	public ResponseEntity<String> logInUserHandler(Authentication auth){
     	Users opt= usersRepository.findByEmail(auth.getName());
 		 if(opt==null) throw new RuntimeException("No user found") ;

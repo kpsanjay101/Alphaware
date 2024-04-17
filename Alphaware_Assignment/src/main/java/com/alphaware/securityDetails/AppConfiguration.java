@@ -42,7 +42,7 @@ public class AppConfiguration {
 			});
 		}) .authorizeHttpRequests(auth -> auth.requestMatchers(HttpMethod.POST , "/api/users/register").permitAll()
 				.requestMatchers("/swagger-ui*/**","/v3/api-docs/**").permitAll()				
-				.requestMatchers("/api/users/logini").hasAnyRole("ADMIN" , "USER")
+				.requestMatchers("/api/users/login").hasAnyRole("ADMIN" , "USER")
 				.requestMatchers("/api/posts/getAll").hasAnyRole("ADMIN" , "USER")
 				.requestMatchers("/api/posts/today").hasAnyRole("ADMIN" , "USER")
 				.requestMatchers("/api/posts/getAllByCategoryName/{name}").hasAnyRole("ADMIN" , "USER")
