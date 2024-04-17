@@ -6,25 +6,22 @@ import com.alphaware.model.Posts;
 
 public interface PostsService {
 	
-	public Posts createPosts(int userId,int categoryId, Posts posts);
+	Posts createPosts(int userId,int categoryId, Posts posts);
 	
-	public Posts deletePosts(int postId);
+	Posts deletePosts(int postId);
 	
-	public Posts getPostsById(int postId);
+	Posts getPostsById(int postId);
 	
-	public List<Posts> getAllPosts();
+	List<Posts> getAllPosts();
 	
-	public Posts updatePosts(int postId,Posts posts);
+	Posts updatePosts(int postId,Posts posts);
 	
-	public List<Posts> getPostsCreatedToday();
+	List<Posts> getPostsCreatedToday();
 	
-	public List<Posts> getAllPostsByUserId(int userId);
+	List<Posts> getAllPostsByUserId(int userId);
 	
-	public List<Posts> getPostByTitle(String title);
+	List<Posts> getPostByTitle(String title);
 	
-	public List<Posts> getAllPostByCategoryName(String name);
-	
-//	public int likePostsByPostIdUserId(int postId, int userId);
-	
-	
+	List<Posts> getAllPostByCategoryName(String name);
+			
 }

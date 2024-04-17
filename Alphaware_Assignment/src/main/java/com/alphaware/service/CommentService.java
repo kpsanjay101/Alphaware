@@ -6,13 +6,13 @@ import com.alphaware.model.Comment;
 
 public interface CommentService {
 	
-	public Comment createComment(int userId, int postId,Comment comment);
+	Comment createComment(int userId, int postId,Comment comment);
 	
-	public Comment deleteComment(int commentid);
+	Comment deleteComment(int commentid);
 	
-	public Comment updateComment(int commentid,Comment comment);
+	Comment updateComment(int commentid,Comment comment);
 	
-	public List<Comment> getAllCommentByPostId(int postId);
+	List<Comment> getAllCommentByPostId(int postId);
 	
 
 }

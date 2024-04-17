@@ -6,14 +6,14 @@ import com.alphaware.model.Category;
 
 public interface CategoryService {
 	
-   public Category createCategory(int userId,Category category);
+   Category createCategory(int userId,Category category);
 	
-	public Category deleteCategory(int categoryId);
+	Category deleteCategory(int categoryId);
 	
-	public Category getCategoryById(int categoryId);
+	Category getCategoryById(int categoryId);
 	
-	public Category updateCategory(int categoryId,Category category);
+	Category updateCategory(int categoryId,Category category);
 	
-	public List<Category>  getAllCategory();
+	List<Category>  getAllCategory();
 
 }

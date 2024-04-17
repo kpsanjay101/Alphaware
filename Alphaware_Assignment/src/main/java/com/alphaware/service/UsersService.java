@@ -6,11 +6,11 @@ import com.alphaware.model.Users;
 
 public interface UsersService {
 	
-	public Users registerUsers(Users users);
+	Users registerUsers(Users users);
 	
-	public List<Users> getAllUsers();
+	List<Users> getAllUsers();
 	
-	public Users getsersByEmail(String email);
+	Users getsersByEmail(String email);
 	
 	
 	
