@@ -6,7 +6,7 @@ import com.alphaware.model.Category;
 
 public interface CategoryService {
 	
-   Category createCategory(int userId,Category category);
+    Category createCategory(int userId,Category category);
 	
 	Category deleteCategory(int categoryId);
 	

@@ -1,6 +1,5 @@
 package com.alphaware.model;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -45,6 +45,24 @@ public class Posts {
     
     private LocalDateTime createdAt = LocalDateTime.now();
     
-    private int likes = 0;
+    @JsonIgnore
+    @OneToMany(mappedBy = "post")
+    private List<Likes> likesList = new ArrayList<>();
+
+    @JsonIgnore
+    @Transient
+    public int getLikeCount() {
+        return this.likesList.size();
+    }
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "post")
+    private List<DisLikes> disLikesList = new ArrayList<>();
+
+    @JsonIgnore
+    @Transient
+    public int getDisLikeCount() {
+        return this.likesList.size();
+    }
 
 }

@@ -172,10 +172,35 @@ public class PostsServiceImpl implements PostsService{
 		
 	}
 
-//	@Override
-//	public int likePostsByPostIdUserId(int postId, int userId) {
-//		// TODO Auto-generated method stub
-//		return 0;
-//	}
+	@Override
+	public int allLikesForPost(int postId) {
+		
+		Optional<Posts> postOp = postRepo.findById(postId);
+		
+		if(postOp.isPresent()) {
+			
+			Posts post = postOp.get();
+			return post.getLikeCount();
+		}else {
+			throw new PostsException("Posts doesn't exist with this id "+postId);
+		}
+		
+	}
+
+	@Override
+	public int allDisLikesForPost(int postId) {
+		
+       Optional<Posts> postOp = postRepo.findById(postId);
+		
+		if(postOp.isPresent()) {
+			
+			Posts post = postOp.get();
+			return post.getDisLikeCount();
+		}else {
+			throw new PostsException("Posts doesn't exist with this id "+postId);
+		}
+	}
+
+
 
 }

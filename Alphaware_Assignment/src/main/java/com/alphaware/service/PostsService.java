@@ -23,5 +23,9 @@ public interface PostsService {
 	List<Posts> getPostByTitle(String title);
 	
 	List<Posts> getAllPostByCategoryName(String name);
+	
+	int allLikesForPost(int postId);
+	
+	int allDisLikesForPost(int postId);
 			
 }

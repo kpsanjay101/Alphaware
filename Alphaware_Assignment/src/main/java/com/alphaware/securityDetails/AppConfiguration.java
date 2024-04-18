@@ -60,6 +60,10 @@ public class AppConfiguration {
 				
 				.requestMatchers("/api/comments/getComments/{postId}").hasAnyRole("ADMIN" , "USER")
 				
+				.requestMatchers("/api/likes/dislikes/likeThePost{PostsId}/{userId}").hasAnyRole("ADMIN" , "USER")
+				
+				.requestMatchers("/api/likes/dislikes/dislikeThePost{PostsId}/{userId}").hasAnyRole("ADMIN" , "USER")
+				
 				.requestMatchers("/api/comments/update_comment/{commentId}").hasAnyRole("ADMIN" , "USER")
 				
 				.anyRequest().hasRole("ADMIN"))
