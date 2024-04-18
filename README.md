@@ -22,9 +22,11 @@ Fresh Blog is a blogging platform designed to provide both users and admins with
    - Users can see all the Posts Uploaded Today.
    - Users can see all Posts using Category Names.
    - Users can comment on any Posts.
+   - User cane Like the Post.
+   - User can DisLike the Post.
 
 3. *Search*
-   - Users can search for blogs by category and heading.
+   - Users can search for blogs by category and Title.
 
 ## Admin Interface Functionality
 1. *Admin Registration*
