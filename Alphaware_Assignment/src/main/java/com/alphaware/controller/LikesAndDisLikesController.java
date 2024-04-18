@@ -14,7 +14,7 @@ import com.alphaware.service.LikeService;
 
 @RestController
 @RequestMapping("/api/likes/dislikes")
-public class LikesAdnDisLikesController {
+public class LikesAndDisLikesController {
 	
 	@Autowired
 	private LikeService likeService;
