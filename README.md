@@ -35,9 +35,13 @@ Fresh Blog is a blogging platform designed to provide both users and admins with
 
 2. *Access Endpoints*
    - Admins have access to all available endpoints.
-## Swagger Images for reference
+## Swagger Images for reference.
+![Alpha_1](https://github.com/kpsanjay101/Alphaware/assets/115461307/406dee94-ddf7-4953-8d53-3bdb3b176c2c)
+![Alpha_2](https://github.com/kpsanjay101/Alphaware/assets/115461307/bbcb039f-b702-465e-ad55-df1b2c3c855b)
+![Alpha_3](https://github.com/kpsanjay101/Alphaware/assets/115461307/798f96e5-90c9-425b-a32b-d9a0a80bb842)
+![Alpha_4](https://github.com/kpsanjay101/Alphaware/assets/115461307/6b538fed-6173-412d-b12c-cc5cd9713434)
 
-![Uploading Screenshot (3412).png…]()
+
 
 
 
