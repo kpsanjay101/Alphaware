@@ -9,7 +9,7 @@ Fresh Blog is a blogging platform designed to provide both users and admins with
 - Spring Boot
 - Spring Security
 - Swagger UI
-
+## Video explanation : [video link](https://drive.google.com/file/d/1tLGfm6Z0LZcog3vAXak86LDdjM_pnhQv/view?usp=sharing)
 ## User Interface Functionality
 1. *User Registration and Login*
    - Users can sign up for a User account.
@@ -22,7 +22,7 @@ Fresh Blog is a blogging platform designed to provide both users and admins with
    - Users can see all the Posts Uploaded Today.
    - Users can see all Posts using Category Names.
    - Users can comment on any Posts.
-   - User cane Like the Post.
+   - User can Like the Post.
    - User can DisLike the Post.
 
 3. *Search*
@@ -35,6 +35,12 @@ Fresh Blog is a blogging platform designed to provide both users and admins with
 
 2. *Access Endpoints*
    - Admins have access to all available endpoints.
+## Swagger Images for reference
+
+![Uploading Screenshot (3412).png…]()
+
+
+
 
 ## Hosting
 - The application is hosted on Railway.app.
